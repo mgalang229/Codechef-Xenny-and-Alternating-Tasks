@@ -18,19 +18,15 @@ int main() {
 			cin >> x[i];
 		for(int i=0; i<n; ++i)
 			cin >> y[i];
-		int n1=0;
+		int n1=0, n2=0;
 		for(int i=0; i<n; ++i) {
-			if(i%2==0)
+			if(i%2==0) {
 				n1+=x[i];
-			else
-				n1+=y[i];
-		}
-		int n2=0;
-		for(int i=0; i<n; ++i) {
-			if(i%2==0)
 				n2+=y[i];
-			else
+			} else {
+				n1+=y[i];
 				n2+=x[i];
+			}
 		}
 		cout << min(n1, n2) << "\n";
 	}
